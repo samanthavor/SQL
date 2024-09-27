@@ -94,9 +94,3 @@ SELECT product, SUM(quantity*price)
 FROM BIT_DB.JanSales
 GROUP BY product
 ORDER BY SUM(quantity*price) desc LIMIT 1;
-
-14. # What products were sold in Los Angeles in February and how many of each product were sold?
-SELECT Product, sum(quantity) as quantity
-FROM BIT_DB.FebSales
-WHERE location like '%Los Angeles%'
-GROUP BY Product;
